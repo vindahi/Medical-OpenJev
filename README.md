@@ -167,7 +167,7 @@ not diagnoses, and must never be used for real clinical decisions or triage of a
   title  = {Medical-OpenJev: Open, Locally-Deployable, Calibrated Medical Decision Gating (three-condition tiers)},
   author = {TODO},
   year   = {2026},
-  url    = {[https://github.com/vindahi/medical-openjev](https://github.com/vindahi/Medical-OpenJev)}
+  url    = {https://github.com/vindahi/Medical-OpenJev}
 }
 ```
 
