@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Medical-OpenJev is an open, locally deployable, calibrated medical decision gate for three condition tiers.">
+    <meta name="theme-color" content="#ffffff">
+    <title>Medical-OpenJev · Calibrated medical decision gating</title>
+    <link rel="icon" href="assets/medical-openjev-method.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/Medical-OpenJev/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="container hero-center">
+          <div class="title-lockup">
+            <h1>Medical-OpenJev 🩺⚡</h1>
+          </div>
+          <div class="project-logos" aria-label="Project institutions">
+            <div class="institution-logo"><img src="logo/清华大学-logo-1024px.png" alt="Tsinghua University"></div>
+            <div class="institution-logo"><img src="logo/山东大学-logo-1024px.png" alt="Shandong University"></div>
+            <div class="institution-logo"><img src="logo/香港城市大学（东莞）-logo-1024px.png" alt="City University of Hong Kong (Dongguan)"></div>
+          </div>
+          <p class="tagline">Open, locally-deployable, <em>calibrated</em> medical decision gating for three condition tiers — the open answer to closed System-1 APIs like TypeSafe Jev.</p>
+          <p class="author-line">
+            Ruifan Zuo<sup>1</sup>, Guocheng Hu<sup>1</sup>, Qichao Zhao<sup>2</sup>, Ziyang Meng<sup>3</sup>, Keyv Liu<sup>4</sup>, Zichao Dai<sup>1</sup>, Rui Wang<sup>5</sup>, Tian Gan<sup>1</sup>
+          </p>
+          <p class="affiliation-line">
+            <sup>1</sup>Shandong University &nbsp; <sup>2</sup>Tsinghua University &nbsp; <sup>3</sup>City University of Hong Kong (Dongguan) &nbsp; <sup>4</sup>Ocean University of China &nbsp; <sup>5</sup>Qingdao Endocrine and Diabetes Hospital
+          </p>
+          <div class="project-links" aria-label="Project resources">
+            <a href="https://arxiv.org" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+            <a href="https://huggingface.co/Qwen/Qwen3.5-4B" target="_blank" rel="noreferrer">Hugging Face <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">METHOD</p>
+            <h2>A gate around your LLM, not a head after it.</h2>
+            <p><strong>Medical-OpenJev is a System-1 reflex for medical pipelines.</strong> One bidirectional forward pass returns routed specialty, evidence-sufficiency probability, calibrated confidence, and an <strong>act</strong> or <strong>escalate</strong> decision. It never generates diagnostic text.</p>
+          </div>
+          <img class="method-figure" src="assets/medical-openjev-method.svg" alt="A medical language model response passes through medical-openjev and is selected to act or escalate." width="1200" height="480">
+          <div class="method-notes">
+            <div>
+              <h3>Model</h3>
+              <p>A frozen ModernBERT-base backbone with lightweight trained heads for evidence sufficiency and specialty routing.</p>
+            </div>
+            <div>
+              <h3>Objective</h3>
+              <p>RLCD with composite strictly proper scoring rewards trains the model to report honest probabilities.</p>
+            </div>
+            <div>
+              <h3>Output</h3>
+              <p>Routed specialty, evidence sufficiency, calibrated confidence, and an operational <code>act</code> or <code>escalate</code> decision.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">RESULTS</p>
+            <h2>Calibrated across three condition tiers.</h2>
+            <p>Gate confidence versus a doctor LLM grading its own confidence, on 60 held-out cases per condition tier. Lower expected calibration error (ECE) is better.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th scope="col">Condition tier</th><th scope="col">Gate ECE ↓</th><th scope="col">LLM ECE ↓</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Dermatology (<code>derm</code>)</th><td><strong>0.209</strong></td><td>0.523</td></tr>
+                <tr><th scope="row">Multi-system (<code>agentclinic</code>)</th><td><strong>0.135</strong></td><td>0.351</td></tr>
+                <tr><th scope="row">Rare disease (<code>rdc</code>)</th><td><strong>0.220</strong></td><td>0.706</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">The gate is approximately 2–3× better calibrated than the LLM's confidence on every tier.</p>
+        </div>
+      </section>
+
+      <section id="models" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">MODELS</p>
+            <h2>Three condition-specific models, one repository.</h2>
+            <p>A difficulty gradient from well-specified skin disease to broad internal medicine and rare, low-prevalence conditions.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th scope="col">Model</th><th scope="col">Condition tier</th><th scope="col">Example diagnoses</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row"><code>derm/</code></th><td><strong>Dermatology</strong> — specific, history-grounded</td><td>Hailey-Hailey disease, Conradi-Hünermann syndrome</td></tr>
+                <tr><th scope="row"><code>agentclinic/</code></th><td><strong>Multi-system / acute internal</strong> — broad open-ended workup</td><td>Lichen sclerosus, Neuroleptic malignant syndrome</td></tr>
+                <tr><th scope="row"><code>rdc/</code></th><td><strong>Rare disease</strong> (Orphanet) — long-tail, hardest</td><td>Hypochondroplasia, Loeffler endocarditis</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="applications" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">APPLICATIONS</p>
+            <h2>Features for medical LLM workflows.</h2>
+          </div>
+          <ul class="feature-list">
+            <li><strong>Three decision primitives</strong><span><code>choice</code> specialty routing, <code>noul</code> evidence sufficiency, and <code>act/escalate</code> gating.</span></li>
+            <li><strong>Calibrated by design</strong><span>RLCD uses composite strictly proper scoring rewards for honest confidence estimates.</span></li>
+            <li><strong>Multi-turn friendly</strong><span>Accumulate consultation evidence turn by turn; each turn is one state snapshot.</span></li>
+            <li><strong>Privacy-first</strong><span>Fully local and Apache-2.0 with no data egress.</span></li>
+            <li><strong>Lightweight</strong><span>A frozen ModernBERT-base backbone plus tiny trained heads; each tier is one approximately 300 MB model.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container notice">
+          <p class="kicker">SAFETY NOTICE</p>
+          <h2>Research use only.</h2>
+          <p><strong>Medical-OpenJev is not a medical device.</strong> It outputs routing and evidence-sufficiency signals, not diagnoses, and must not be used for real clinical decisions or triage of actual patients.</p>
+        </div>
+      </section>
+
+      <section id="team" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">TEAM</p>
+            <h2>Project team and affiliations.</h2>
+          </div>
+          <div class="table-wrap team-table-wrap">
+            <table class="team-table">
+              <thead><tr><th scope="col">Person</th><th scope="col">Role</th><th scope="col">Affiliation</th></tr></thead>
+              <tbody>
+                <tr><td>Ruifan Zuo</td><td>Student Project Leadership</td><td>Shandong University</td></tr>
+                <tr><td>Guocheng Hu</td><td>Student Project Leadership</td><td>Shandong University</td></tr>
+                <tr><td>Qichao Zhao</td><td>Computing power support</td><td>Tsinghua University</td></tr>
+                <tr><td>Ziyang Meng</td><td>Team Member</td><td>City University of Hong Kong (Dongguan)</td></tr>
+                <tr><td>Keyv Liu</td><td>Team Member</td><td>Ocean University of China</td></tr>
+                <tr><td>Zichao Dai</td><td>Team Member</td><td>Shandong University</td></tr>
+                <tr><td>Rui Wang</td><td>Medical Support</td><td>Qingdao Endocrine and Diabetes Hospital</td></tr>
+                <tr><td>Tian Gan</td><td>Supervision &amp; Project Lead</td><td>Shandong University</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container openness">
+          <p class="kicker">OPENNESS</p>
+          <h2>Open weights and evaluation, fully auditable.</h2>
+          <p>Model weights and evaluation materials are openly available for transparent, auditable review.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>medical-open<span>jev</span></span>
+        <span>Open, calibrated medical decision-gating research.</span>
+        <span>© <span id="year"></span></span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
