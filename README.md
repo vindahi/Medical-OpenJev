@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://huggingface.co/TODO/medical-openjev"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Models-HuggingFace-yellow" alt="Models on HuggingFace"></a>
+  <a href="https://huggingface.co/fancc28/Medical-OpenJev"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Models-HuggingFace-yellow" alt="Models on HuggingFace"></a>
   <img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License">
   <img src="https://img.shields.io/badge/models-3%20condition%20tiers-lightgrey" alt="Models">
   <img src="https://img.shields.io/badge/backbone-ModernBERT--base-orange" alt="Backbone">
