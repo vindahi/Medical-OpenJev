@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="medical-openjev is an open-source, locally deployable, rigorously calibrated medical jev model.">
+    <meta name="description" content="Medical-OpenJev is an open, locally deployable, calibrated medical decision gate for three condition tiers.">
     <meta name="theme-color" content="#ffffff">
-    <title>medical-openjev · Calibrated medical decision gating</title>
+    <title>Medical-OpenJev · Calibrated medical decision gating</title>
     <link rel="icon" href="assets/medical-openjev-method.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/Medical-OpenJev/styles.css">
   </head>
@@ -16,21 +16,20 @@
       <section id="top" class="hero">
         <div class="container hero-center">
           <div class="title-lockup">
-            <span class="project-mark" aria-hidden="true">+</span>
-            <h1>medical-open<span>jev</span></h1>
+            <h1>Medical-OpenJev 🩺⚡</h1>
           </div>
-          <p class="tagline">An open-source, locally deployable, rigorously calibrated medical decision-gating model.</p>
-          <p class="author-line">
-            Tian Gan<sup>1</sup>, Ruifan Zuo<sup>1</sup>, Guocheng Hu<sup>1</sup>, Ziyang Meng<sup>2</sup>, Dai Zichao<sup>1</sup>, Zhao Qichao<sup>3</sup>, Rui Wang<sup>4</sup>, San Zhang
-          </p>
-          <p class="affiliation-line">
-            <sup>1</sup>Shandong University &nbsp; <sup>2</sup>City University of Hong Kong (Dongguan) &nbsp; <sup>3</sup>Tsinghua University &nbsp; <sup>4</sup>Qingdao Endocrine and Diabetes Hospital
-          </p>
           <div class="project-logos" aria-label="Project institutions">
             <div class="institution-logo"><img src="logo/清华大学-logo-1024px.png" alt="Tsinghua University"></div>
             <div class="institution-logo"><img src="logo/山东大学-logo-1024px.png" alt="Shandong University"></div>
             <div class="institution-logo"><img src="logo/香港城市大学（东莞）-logo-1024px.png" alt="City University of Hong Kong (Dongguan)"></div>
           </div>
+          <p class="tagline">Open, locally-deployable, <em>calibrated</em> medical decision gating for three condition tiers — the open answer to closed System-1 APIs like TypeSafe Jev.</p>
+          <p class="author-line">
+            Ruifan Zuo<sup>1</sup>, Guocheng Hu<sup>1</sup>, Qichao Zhao<sup>2</sup>, Ziyang Meng<sup>3</sup>, Keyv Liu<sup>4</sup>, Zichao Dai<sup>1</sup>, Rui Wang<sup>5</sup>, Tian Gan<sup>1</sup>
+          </p>
+          <p class="affiliation-line">
+            <sup>1</sup>Shandong University &nbsp; <sup>2</sup>Tsinghua University &nbsp; <sup>3</sup>City University of Hong Kong (Dongguan) &nbsp; <sup>4</sup>Ocean University of China &nbsp; <sup>5</sup>Qingdao Endocrine and Diabetes Hospital
+          </p>
           <div class="project-links" aria-label="Project resources">
             <a href="https://arxiv.org" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
             <a href="https://huggingface.co/Qwen/Qwen3.5-4B" target="_blank" rel="noreferrer">Hugging Face <span aria-hidden="true">↗</span></a>
@@ -42,22 +41,22 @@
         <div class="container">
           <div class="section-heading">
             <p class="kicker">METHOD</p>
-            <h2>Decision gating, not answer generation.</h2>
-            <p>medical-openjev does not generate diagnostic answers. It determines whether an upstream medical LLM's current answer is trustworthy enough to <strong>act</strong>, or should be <strong>escalated</strong> for deeper inquiry or human review.</p>
+            <h2>A gate around your LLM, not a head after it.</h2>
+            <p><strong>Medical-OpenJev is a System-1 reflex for medical pipelines.</strong> One bidirectional forward pass returns routed specialty, evidence-sufficiency probability, calibrated confidence, and an <strong>act</strong> or <strong>escalate</strong> decision. It never generates diagnostic text.</p>
           </div>
           <img class="method-figure" src="assets/medical-openjev-method.svg" alt="A medical language model response passes through medical-openjev and is selected to act or escalate." width="1200" height="480">
           <div class="method-notes">
             <div>
               <h3>Model</h3>
-              <p>A frozen ModernBERT backbone with lightweight, pluggable heads for evidence sufficiency and specialty routing.</p>
+              <p>A frozen ModernBERT-base backbone with lightweight trained heads for evidence sufficiency and specialty routing.</p>
             </div>
             <div>
               <h3>Objective</h3>
-              <p>Reinforcement learning with a strict proper scoring rule directly optimizes calibration.</p>
+              <p>RLCD with composite strictly proper scoring rewards trains the model to report honest probabilities.</p>
             </div>
             <div>
               <h3>Output</h3>
-              <p>A calibrated confidence score plus an operational <code>act</code> or <code>escalate</code> decision for an upstream medical LLM.</p>
+              <p>Routed specialty, evidence sufficiency, calibrated confidence, and an operational <code>act</code> or <code>escalate</code> decision.</p>
             </div>
           </div>
         </div>
@@ -67,25 +66,44 @@
         <div class="container">
           <div class="section-heading">
             <p class="kicker">RESULTS</p>
-            <h2>Calibration on the dermatology (derm) evaluation.</h2>
-            <p>Current experiments use <strong>Qwen3.5-4B</strong>. Conventional LLM self-assessment was severely overconfident: confidence was <strong>0.74</strong> despite an actual accuracy of only <strong>0.28</strong>. medical-openjev achieved an ECE of <strong>0.226</strong>—about <strong>58% lower</strong> than the Base LLM—and reached <strong>0.667</strong> accuracy in its top-confidence 10%, or <strong>2×</strong> the Base LLM.</p>
+            <h2>Calibrated across three condition tiers.</h2>
+            <p>Gate confidence versus a doctor LLM grading its own confidence, on 60 held-out cases per condition tier. Lower expected calibration error (ECE) is better.</p>
           </div>
           <div class="table-wrap">
             <table>
               <thead>
-                <tr><th scope="col">Metric</th><th scope="col">medical-openjev</th><th scope="col">Base LLM</th><th scope="col">Random</th><th scope="col">Outcome</th></tr>
+                <tr><th scope="col">Condition tier</th><th scope="col">Gate ECE ↓</th><th scope="col">LLM ECE ↓</th></tr>
               </thead>
               <tbody>
-                <tr><th scope="row">ECE ↓</th><td><strong>0.226</strong></td><td>0.533</td><td>0.331</td><td>58% lower than Base LLM</td></tr>
-                <tr><th scope="row">Brier score ↓</th><td><strong>0.241</strong></td><td>0.523</td><td>0.345</td><td>Approximately halved relative to the Base LLM</td></tr>
-                <tr><th scope="row">AURC ↓</th><td><strong>0.597</strong></td><td>0.666</td><td>0.746</td><td>Best among the three methods</td></tr>
-                <tr><th scope="row">CovAcc@95% ↑</th><td><strong>0.281</strong></td><td>0.246</td><td>0.263</td><td>Best overall</td></tr>
-                <tr><th scope="row">Cov@95prec ↑</th><td><strong>0.067</strong></td><td>0.000</td><td>0.000</td><td>Achieved only by medical-openjev</td></tr>
-                <tr><th scope="row">Accuracy of top-confidence 10% ↑</th><td><strong>0.667</strong></td><td>0.333</td><td>0.167</td><td>2× Base LLM</td></tr>
+                <tr><th scope="row">Dermatology (<code>derm</code>)</th><td><strong>0.209</strong></td><td>0.523</td></tr>
+                <tr><th scope="row">Multi-system (<code>agentclinic</code>)</th><td><strong>0.135</strong></td><td>0.351</td></tr>
+                <tr><th scope="row">Rare disease (<code>rdc</code>)</th><td><strong>0.220</strong></td><td>0.706</td></tr>
               </tbody>
             </table>
           </div>
-          <p class="table-note">↓ lower is better · ↑ higher is better</p>
+          <p class="table-note">The gate is approximately 2–3× better calibrated than the LLM's confidence on every tier.</p>
+        </div>
+      </section>
+
+      <section id="models" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">MODELS</p>
+            <h2>Three condition-specific models, one repository.</h2>
+            <p>A difficulty gradient from well-specified skin disease to broad internal medicine and rare, low-prevalence conditions.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th scope="col">Model</th><th scope="col">Condition tier</th><th scope="col">Example diagnoses</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row"><code>derm/</code></th><td><strong>Dermatology</strong> — specific, history-grounded</td><td>Hailey-Hailey disease, Conradi-Hünermann syndrome</td></tr>
+                <tr><th scope="row"><code>agentclinic/</code></th><td><strong>Multi-system / acute internal</strong> — broad open-ended workup</td><td>Lichen sclerosus, Neuroleptic malignant syndrome</td></tr>
+                <tr><th scope="row"><code>rdc/</code></th><td><strong>Rare disease</strong> (Orphanet) — long-tail, hardest</td><td>Hypochondroplasia, Loeffler endocarditis</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
@@ -93,13 +111,14 @@
         <div class="container">
           <div class="section-heading">
             <p class="kicker">APPLICATIONS</p>
-            <h2>Capabilities for medical LLM workflows.</h2>
+            <h2>Features for medical LLM workflows.</h2>
           </div>
           <ul class="feature-list">
-            <li><strong>Calibrated confidence scoring</strong><span>Attach a calibrated confidence score and actionable decision to any medical LLM answer.</span></li>
-            <li><strong>Intelligent triage</strong><span>Perform specialty routing for intelligent triage.</span></li>
-            <li><strong>Evidence-gap prompts</strong><span>Identify evidence gaps in real time during a consultation.</span></li>
-            <li><strong>High-risk output interception</strong><span>Detect and intercept outputs that are wrong yet highly confident.</span></li>
+            <li><strong>Three decision primitives</strong><span><code>choice</code> specialty routing, <code>noul</code> evidence sufficiency, and <code>act/escalate</code> gating.</span></li>
+            <li><strong>Calibrated by design</strong><span>RLCD uses composite strictly proper scoring rewards for honest confidence estimates.</span></li>
+            <li><strong>Multi-turn friendly</strong><span>Accumulate consultation evidence turn by turn; each turn is one state snapshot.</span></li>
+            <li><strong>Privacy-first</strong><span>Fully local and Apache-2.0 with no data egress.</span></li>
+            <li><strong>Lightweight</strong><span>A frozen ModernBERT-base backbone plus tiny trained heads; each tier is one approximately 300 MB model.</span></li>
           </ul>
         </div>
       </section>
@@ -108,7 +127,7 @@
         <div class="container notice">
           <p class="kicker">SAFETY NOTICE</p>
           <h2>Research use only.</h2>
-          <p>medical-openjev is not a clinical device.</p>
+          <p><strong>Medical-OpenJev is not a medical device.</strong> It outputs routing and evidence-sufficiency signals, not diagnoses, and must not be used for real clinical decisions or triage of actual patients.</p>
         </div>
       </section>
 
@@ -122,14 +141,14 @@
             <table class="team-table">
               <thead><tr><th scope="col">Person</th><th scope="col">Role</th><th scope="col">Affiliation</th></tr></thead>
               <tbody>
-                <tr><td>Tian Gan</td><td>Supervision &amp; Project Lead</td><td>Shandong University</td></tr>
                 <tr><td>Ruifan Zuo</td><td>Student Project Leadership</td><td>Shandong University</td></tr>
                 <tr><td>Guocheng Hu</td><td>Student Project Leadership</td><td>Shandong University</td></tr>
+                <tr><td>Qichao Zhao</td><td>Computing power support</td><td>Tsinghua University</td></tr>
                 <tr><td>Ziyang Meng</td><td>Team Member</td><td>City University of Hong Kong (Dongguan)</td></tr>
-                <tr><td>Dai Zichao</td><td>—</td><td>Shandong University</td></tr>
-                <tr><td>Zhao Qichao</td><td>—</td><td>Tsinghua University</td></tr>
+                <tr><td>Keyv Liu</td><td>Team Member</td><td>Ocean University of China</td></tr>
+                <tr><td>Zichao Dai</td><td>Team Member</td><td>Shandong University</td></tr>
                 <tr><td>Rui Wang</td><td>Medical Support</td><td>Qingdao Endocrine and Diabetes Hospital</td></tr>
-                <tr><td>San Zhang</td><td>Medical Support</td><td>Not specified</td></tr>
+                <tr><td>Tian Gan</td><td>Supervision &amp; Project Lead</td><td>Shandong University</td></tr>
               </tbody>
             </table>
           </div>

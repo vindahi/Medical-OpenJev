@@ -37,11 +37,11 @@ h1 { margin-bottom: 0; font-size: clamp(40px, 6vw, 64px); line-height: 1; letter
 h1 span, .site-footer span span { color: var(--accent); }
 .title-lockup { display: flex; align-items: center; justify-content: center; gap: 13px; }
 .project-mark { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 9px; background: var(--accent); color: #fff; font-size: 38px; font-weight: 400; line-height: 1; }
-.tagline { max-width: 800px; margin: 18px auto 20px; color: #344752; font-size: clamp(22px, 3vw, 30px); line-height: 1.25; font-weight: 500; letter-spacing: -.8px; }
+.tagline { max-width: 800px; margin: 0 auto 20px; color: #344752; font-size: clamp(22px, 3vw, 30px); line-height: 1.25; font-weight: 500; letter-spacing: -.8px; }
 .author-line { max-width: 980px; margin: 0 auto 9px; color: var(--accent); font-size: 16px; line-height: 1.65; }
-.affiliation-line { max-width: 960px; margin: 0 auto; color: #4d5e67; font-size: 14px; line-height: 1.7; }
+.affiliation-line { max-width: 1040px; margin: 0 auto; color: #4d5e67; font-size: 13px; line-height: 1.7; }
 sup { color: var(--accent); font-size: .73em; font-weight: 700; }
-.project-logos { display: flex; align-items: center; justify-content: center; gap: 24px; margin: 24px 0; }
+.project-logos { display: flex; align-items: center; justify-content: center; gap: 24px; margin: 16px 0; }
 .institution-logo { display: grid; width: 112px; height: 78px; place-items: center; }
 .institution-logo img { display: block; max-width: 100%; max-height: 76px; object-fit: contain; }
 .project-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin: 0 0 28px; }
@@ -93,7 +93,7 @@ tbody td:nth-child(2) { color: #115f67; }
   .project-mark { width: 39px; height: 39px; border-radius: 7px; font-size: 31px; }
   .author-line { font-size: 14px; }
   .affiliation-line { font-size: 12px; }
-  .project-logos { gap: 11px; margin: 21px 0; }
+  .project-logos { gap: 11px; margin: 14px 0; }
   .institution-logo { width: 86px; height: 62px; }
   .institution-logo img { max-height: 60px; }
   .section { padding: 48px 0; }
