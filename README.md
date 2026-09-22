@@ -1,4 +1,4 @@
-# Medical-OpenJev 🩺⚡
+<h1 align="center">Medical-OpenJev 🩺⚡</h1>
 
 <p align="center">
   <b>Open, locally-deployable, <i>calibrated</i> medical decision gating for three condition tiers — the open answer to closed System-1 APIs like TypeSafe Jev.</b>
@@ -165,7 +165,7 @@ not diagnoses, and must never be used for real clinical decisions or triage of a
 ```bibtex
 @software{medicalopenjev2026,
   title  = {Medical-OpenJev: Open, Locally-Deployable, Calibrated Medical Decision Gating (three-condition tiers)},
-  author = {TODO},
+  author = {Ruifan Zuo and Guocheng Hu and Qichao Zhao and Ziyang Meng and Keyv Liu and Zichao Dai and Rui Wang and Tian Gan},
   year   = {2026},
   url    = {https://github.com/vindahi/Medical-OpenJev}
 }
@@ -175,14 +175,14 @@ not diagnoses, and must never be used for real clinical decisions or triage of a
 
 | Person | Role | Affiliation |
 | --- | --- | --- |
-| Tian Gan | Supervision & Project Lead | Shandong University |
 | Ruifan Zuo | Student Project Leadership | Shandong University |
 | Guocheng Hu | Student Project Leadership | Shandong University |
+| Qichao Zhao | Computing power support | Tsinghua University |
 | Ziyang Meng | Team Member | City University of Hong Kong (Dongguan) |
-| Dai Zichao | — | Shandong University |
-| Zhao Qichao | — | Tsinghua University |
+| Keyv Liu | Team Member | Ocean University of China |
+| Zichao Dai | Team Member | Shandong University |
 | Rui Wang | Medical Support | Qingdao Endocrine and Diabetes Hospital |
-| San Zhang | Medical Support | Not specified |
+| Tian Gan | Supervision & Project Lead | Shandong University |
 
 ## 🙏 Acknowledgements
 
