@@ -171,6 +171,19 @@ not diagnoses, and must never be used for real clinical decisions or triage of a
 }
 ```
 
+## Team and affiliations
+
+| Person | Role | Affiliation |
+| --- | --- | --- |
+| Tian Gan | Supervision & Project Lead | Shandong University |
+| Ruifan Zuo | Student Project Leadership | Shandong University |
+| Guocheng Hu | Student Project Leadership | Shandong University |
+| Ziyang Meng | Team Member | City University of Hong Kong (Dongguan) |
+| Dai Zichao | — | Shandong University |
+| Zhao Qichao | — | Tsinghua University |
+| Rui Wang | Medical Support | Qingdao Endocrine and Diabetes Hospital |
+| San Zhang | Medical Support | Not specified |
+
 ## 🙏 Acknowledgements
 
 Conceptually builds on the non-autoregressive System-1 decision paradigm popularized by TypeSafe **Jev** (closed)
