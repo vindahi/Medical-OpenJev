@@ -1,6 +1,12 @@
 <h1 align="center">Medical-OpenJev 🩺⚡</h1>
 
 <p align="center">
+  <img src="web/logo/清华大学-logo-1024px.png" alt="Tsinghua University" height="74">&nbsp;&nbsp;&nbsp;
+  <img src="web/logo/山东大学-logo-1024px.png" alt="Shandong University" height="74">&nbsp;&nbsp;&nbsp;
+  <img src="web/logo/香港城市大学（东莞）-logo-1024px.png" alt="City University of Hong Kong (Dongguan)" height="74">
+</p>
+
+<p align="center">
   <b>Open, locally-deployable, <i>calibrated</i> medical decision gating for three condition tiers — the open answer to closed System-1 APIs like TypeSafe Jev.</b>
 </p>
 
