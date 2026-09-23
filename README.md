@@ -179,16 +179,39 @@ not diagnoses, and must never be used for real clinical decisions or triage of a
 
 ## Team and affiliations
 
-| Person | Role | Affiliation |
-| --- | --- | --- |
-| Ruifan Zuo | Student Project Leadership | Shandong University |
-| Guocheng Hu | Student Project Leadership | Shandong University |
-| Qichao Zhao | Computing power support | Tsinghua University |
-| Ziyang Meng | Team Member | City University of Hong Kong (Dongguan) |
-| Keyv Liu | Team Member | Ocean University of China |
-| Zichao Dai | Team Member | Shandong University |
-| Rui Wang | Medical Support | Qingdao Endocrine and Diabetes Hospital |
-| Tian Gan | Supervision & Project Lead | Shandong University |
+### Project leadership
+
+<p align="center">
+  <b>Tian Gan</b><br>
+  <sub>Supervision &amp; Project Lead · Shandong University</sub>
+</p>
+
+### Student project leadership
+
+<p align="center">
+  <b>Ruifan Zuo</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Guocheng Hu</b><br>
+  <sub>Shandong University</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>Shandong University</sub>
+</p>
+
+### Specialized support
+
+<p align="center">
+  <b>Rui Wang</b><br>
+  <sub>Medical Support · Qingdao Endocrine and Diabetes Hospital</sub>
+</p>
+
+<p align="center">
+  <b>Qichao Zhao</b><br>
+  <sub>Computing Power Support · Tsinghua University</sub>
+</p>
+
+### Team members
+
+<p align="center">
+  <b>Ziyang Meng</b> · City University of Hong Kong (Dongguan)<br>
+  <b>Keyv Liu</b> · Ocean University of China<br>
+  <b>Zichao Dai</b> · Shandong University
+</p>
 
 ## 🙏 Acknowledgements
 
