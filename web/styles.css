@@ -45,8 +45,12 @@ sup { color: var(--accent); font-size: .73em; font-weight: 700; }
 .institution-logo { display: grid; width: 112px; height: 78px; place-items: center; }
 .institution-logo img { display: block; max-width: 100%; max-height: 76px; object-fit: contain; }
 .project-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin: 0 0 28px; }
-.project-links a { padding: 8px 15px; border-radius: 999px; background: #26343d; color: #fff; font-size: 14px; font-weight: 650; }
+.project-links a { display: inline-flex; align-items: center; gap: 7px; padding: 8px 15px; border-radius: 999px; background: #26343d; color: #fff; font-size: 14px; font-weight: 650; }
 .project-links a:hover { background: var(--accent); text-decoration: none; }
+.project-links a:focus-visible { outline: 3px solid #75b8ca; outline-offset: 3px; }
+.resource-icon { width: 1.1em; height: 1.1em; flex: 0 0 auto; fill: currentColor; }
+.resource-icon--arxiv { width: 2.45em; height: 1.15em; }
+.resource-icon--huggingface { width: 1.2em; height: 1.2em; }
 .section { padding: 62px 0; border-top: 1px solid var(--line); }
 .section-muted { background: var(--surface); }
 .section-heading { max-width: 760px; margin-bottom: 30px; }
