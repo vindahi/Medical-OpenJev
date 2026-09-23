@@ -179,15 +179,18 @@ not diagnoses, and must never be used for real clinical decisions or triage of a
 
 ## Team and affiliations
 
-- **Supervision & Project Lead:** Tian Gan — Shandong University
-- **Student Project Leadership:** Ruifan Zuo, Guocheng Hu — Shandong University
+- **Supervision & Project Lead:** Tian Gan<sup>1</sup>
+- **Student Project Leadership:** Ruifan Zuo<sup>1</sup>, Guocheng Hu<sup>1</sup>
 - **Specialized Support:**
-  - **Medical Support:** Rui Wang — Qingdao Endocrine and Diabetes Hospital
-  - **Computing Power Support:** Qichao Zhao — Tsinghua University
+  - **Medical Support:** Rui Wang<sup>5</sup>
+  - **Computing Power Support:** Qichao Zhao<sup>2</sup>
 - **Team Members:**
-  - Ziyang Meng — City University of Hong Kong (Dongguan)
-  - Keyv Liu — Ocean University of China
-  - Zichao Dai — Shandong University
+  - Ziyang Meng<sup>3</sup>
+  - Keyv Liu<sup>4</sup>
+  - Zichao Dai<sup>1</sup>
+
+**Affiliations:** <sup>1</sup> Shandong University · <sup>2</sup> Tsinghua University · <sup>3</sup> City University of Hong Kong (Dongguan) · <sup>4</sup> Ocean University of China · <sup>5</sup> Qingdao Endocrine and Diabetes Hospital
+
 
 ## 🙏 Acknowledgements
 
