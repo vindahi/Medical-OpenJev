@@ -1,9 +1,10 @@
 <h1 align="center">Medical-OpenJev 🩺⚡</h1>
 
 <p align="center">
-  <img src="web/logo/清华大学-logo-1024px.png" alt="Tsinghua University" height="74">&nbsp;&nbsp;&nbsp;
   <img src="web/logo/山东大学-logo-1024px.png" alt="Shandong University" height="74">&nbsp;&nbsp;&nbsp;
-  <img src="web/logo/香港城市大学（东莞）-logo-1024px.png" alt="City University of Hong Kong (Dongguan)" height="74">
+  <img src="web/logo/清华大学-logo-1024px.png" alt="Tsinghua University" height="74">&nbsp;&nbsp;&nbsp;
+  <img src="web/logo/香港城市大学（东莞）-logo-1024px.png" alt="City University of Hong Kong" height="74">&nbsp;&nbsp;&nbsp;
+  <img src="web/logo/中国海洋大学logo.png" alt="Ocean University of China" height="74">
 </p>
 
 <p align="center">
@@ -11,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://huggingface.co/fancc28/Medical-OpenJev"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Models-HuggingFace-yellow" alt="Models on HuggingFace"></a>
+  <a href="https://huggingface.co/TODO/medical-openjev"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Models-HuggingFace-yellow" alt="Models on HuggingFace"></a>
   <img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License">
   <img src="https://img.shields.io/badge/models-3%20condition%20tiers-lightgrey" alt="Models">
   <img src="https://img.shields.io/badge/backbone-ModernBERT--base-orange" alt="Backbone">
@@ -159,12 +160,9 @@ medical-openjev/
 > answering multiple typed questions in a single forward pass (true Jev/Laya parity). It will supersede the three
 > per-condition tiers and fix the degenerate `derm/choice` act threshold.
 
----
+## Openness
 
-## ⚠️ Disclaimer
-
-**Research use only. Not a medical device.** Medical-OpenJev outputs routing and evidence-sufficiency *signals*,
-not diagnoses, and must never be used for real clinical decisions or triage of actual patients.
+**Open-source release coming soon.**
 
 ## 📝 Citation
 
@@ -190,7 +188,6 @@ not diagnoses, and must never be used for real clinical decisions or triage of a
   - Zichao Dai<sup>1</sup>
 
 **Affiliations:** <sup>1</sup> Shandong University · <sup>2</sup> Tsinghua University · <sup>3</sup> City University of Hong Kong · <sup>4</sup> Ocean University of China · <sup>5</sup> Qingdao Endocrine and Diabetes Hospital
-
 
 ## 🙏 Acknowledgements
 
