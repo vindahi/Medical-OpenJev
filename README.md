@@ -189,7 +189,7 @@ not diagnoses, and must never be used for real clinical decisions or triage of a
   - Keyv Liu<sup>4</sup>
   - Zichao Dai<sup>1</sup>
 
-**Affiliations:** <sup>1</sup> Shandong University · <sup>2</sup> Tsinghua University · <sup>3</sup> City University of Hong Kong (Dongguan) · <sup>4</sup> Ocean University of China · <sup>5</sup> Qingdao Endocrine and Diabetes Hospital
+**Affiliations:** <sup>1</sup> Shandong University · <sup>2</sup> Tsinghua University · <sup>3</sup> City University of Hong Kong · <sup>4</sup> Ocean University of China · <sup>5</sup> Qingdao Endocrine and Diabetes Hospital
 
 
 ## 🙏 Acknowledgements
